@@ -8,10 +8,10 @@ export class DBService {
 
     public constructor() {
 		if(window['_cordovaNative']){
-			this.database = new SqliteDBService();
+			//this.database = new SqliteDBService();
 		}
 	}
-	
+
 	public get(){
 		return this.database;
 	}

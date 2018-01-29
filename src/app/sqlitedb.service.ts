@@ -12,7 +12,7 @@ export class SqliteDBService {
     public constructor() {
 		//console.log(this.isNotInitialized);
         if(!this.isInstantiated) {
-            this.database = (<any>window).sqlitePlugin.openDatabase({name: 'hepac.db', location: 'default'});
+            this.database = (<any>window).sqlitePlugin.openDatabase({name: 'angplay.db', location: 'default'});
 			
 			// Clean version
 			//this.database.sqlBatch(['DROP TABLE IF EXISTS app_versions',], function(){}, function(e){});	

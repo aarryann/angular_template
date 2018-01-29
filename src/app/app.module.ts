@@ -9,7 +9,8 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
-import { DBService } from "./db.service";
+//import { DBService } from "./db.service";
+import { SqliteDBService } from "./sqlitedb.service";
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -41,7 +42,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 RouterModule,
     AppRoutingModule
   ],
-  providers: [DBService],
+  providers: [SqliteDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
