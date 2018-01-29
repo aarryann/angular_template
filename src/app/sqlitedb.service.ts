@@ -4,18 +4,18 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class SqliteDBService {
 
     private isInstantiated: boolean;
-	private isNotInitialized: boolean = false;
+	  private isNotInitialized: boolean = false;
     private database: any;
     private listener: EventEmitter<any> = new EventEmitter();
-	private appVersion: string = "1.0";
+    private appVersion: string = "1.0";
 
     public constructor() {
 		//console.log(this.isNotInitialized);
         if(!this.isInstantiated) {
-            this.database = (<any>window).sqlitePlugin.openDatabase({name: 'angplay.db', location: 'default'});
-			
+            this.database = (<any>window).sqlitePlugin.openDatabase({name: 'angular_playground.db', location: 'default'});
+
 			// Clean version
-			//this.database.sqlBatch(['DROP TABLE IF EXISTS app_versions',], function(){}, function(e){});	
+			//this.database.sqlBatch(['DROP TABLE IF EXISTS app_versions',], function(){}, function(e){});
 
 			this.database.sqlBatch([
 				'CREATE TABLE IF NOT EXISTS app_versions (id INTEGER PRIMARY KEY, version TEXT UNIQUE, description TEXT)',
@@ -35,17 +35,17 @@ export class SqliteDBService {
 								console.log('Version initialized');
 							  }, function(error) {
 								console.log('Version initialization ERROR: ' + error.message);
-							});	
+							});
 						}
 					}.bind(this), function(error) {
 						console.log('SELECT version ERROR: ' + error.message);
 					});
 				}.bind(this), function(error) {
 					console.log('Table check ERROR: ' + error.message);
-			});	
-			
+			});
+
             this.isInstantiated = true;
         }
 	}
-	
+
 }

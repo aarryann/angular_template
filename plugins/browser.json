@@ -7,11 +7,11 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.hybrid.angularplayground"
-    },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.hybrid.angularplayground"
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
   "dependent_plugins": {}

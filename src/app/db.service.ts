@@ -7,8 +7,8 @@ export class DBService {
     private database: any;
 
     public constructor() {
-		if(window['_cordovaNative']){
-			//this.database = new SqliteDBService();
+		    if(window['_cordovaNative']){
+			       this.database = new SqliteDBService();
 		}
 	}
 
