@@ -35,6 +35,7 @@ This project is a Hybrid Cordova Web + Mobile app in Angular 4
 
 * Running `ng serve` removes the `www/` directory while `ng build` restores it. You will need `www/` directory for `cordova` commands
 * Go to angular_cordova_sandbox repository: `cd angular_cordova_sandbox\`
+* Add sqlite plugin: `cordova plugin add cordova-sqlite-storage --save`
 * List available Cordova platforms: `cordova platform ls`
 * Add a desired platform: `cordova platform add [ browser | android | ios | .. ]`
 
