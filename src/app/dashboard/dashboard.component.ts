@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
-//import { DBService } from '../db.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,10 +8,6 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
   private database: any;
-
-  constructor() {
-    //this.database = this.dbService.get();
-  }
 
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
