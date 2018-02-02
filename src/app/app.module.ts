@@ -38,7 +38,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
     FormsModule,
     HttpModule,
     ComponentsModule,
-RouterModule,
+	RouterModule,
     AppRoutingModule
   ],
   providers: [DBService],

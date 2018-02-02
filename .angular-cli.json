@@ -19,14 +19,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-          "../node_modules/bootstrap/dist/css/bootstrap.css",
+          "../node_modules/bootstrap/dist/css/bootstrap.min.css",
           "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
           "./assets/sass/material-dashboard.scss",
+		  "../node_modules/font-awesome/css/font-awesome.css",
+		  "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+		  "../node_modules/material-design-icons/iconfont/material-icons.css",
           "./assets/css/demo.css"
       ],
       "scripts": [
           "../node_modules/jquery/dist/jquery.js",
-          "../node_modules/bootstrap/dist/js/bootstrap.js",
+          "../node_modules/bootstrap/dist/js/bootstrap.min.js",
           "../node_modules/bootstrap-material-design/dist/js/ripples.min.js",
           "../node_modules/bootstrap-material-design/dist/js/material.min.js",
           "../node_modules/arrive/src/arrive.js",
@@ -49,13 +52,16 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {

@@ -23,10 +23,21 @@ export class AppComponent implements OnInit {
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
     constructor( public location: Location, private router: Router, private dbService: DBService) {
+        console.log(`${Date.now()}:App Component: Constructor`);
+    }
+
+    deviceInit() {
+        console.log(`${Date.now()}:App Component: deviceInit`);
         this.database = this.dbService.get();
     }
 
     ngOnInit() {
+        // Startup local database when device is ready
+        console.log(`${Date.now()}:App Component: ngOnInit - ${window['_cordovaNative']}`);
+        if(window['_cordovaNative']){
+      	   document.addEventListener("deviceready", this.deviceInit.bind(this), false);
+  		  }
+
         $.material.init();
         const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
         const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
