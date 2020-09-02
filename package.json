@@ -39,7 +39,7 @@
     "core-js": "^2.5.3",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
-    "googleapis": "25.0.0",
+    "googleapis": "59.0.0",
     "jquery": "3.4.1",
     "material-design-icons": "^3.0.1",
     "moment": "2.20.1",
